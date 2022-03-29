@@ -4,14 +4,6 @@ import React, { useState } from 'react'
 
 function App() {
 
-  const [show, set] = useState(false)
-  const transitions = useTransition(show, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-  })
-
-  
   return (
     <div className="h-screen bg-black">
       <section className="hero container max-w-screen-sm mx-auto p-10 flex">
@@ -30,7 +22,7 @@ function App() {
         <p className="text-2xl pb-5">133 Huges Rd, Watsonville, CA 95076</p>
       </section>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
