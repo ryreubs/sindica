@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Logo from './Images/SINDICA-LOGO.svg'
+import { useTransition, animated } from 'react-spring'
+import React, { useState } from 'react'
 
 function App() {
+
+  const [show, set] = useState(false)
+  const transitions = useTransition(show, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  })
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen bg-black">
+      <section className="hero container max-w-screen-sm mx-auto p-10 flex">
+        <img src={Logo} alt="Sindica Corporation - Logo" className="mx-auto"/>
+      </section>
+      <section className="text-emerald-500 text-center">
+        <h1 className="text-4xl uppercase pb-5">Contact Us</h1>
+      </section>
+      <section className="text-white text-center">
+        <p className="text-2xl pb-5">(831) 800-1311</p>
+      </section>
+      <section className="text-white text-center">
+        <p className="text-2xl pb-5">info@sindica.net</p>
+      </section>
+      <section className="text-white text-center">
+        <p className="text-2xl pb-5">133 Huges Rd, Watsonville, CA 95076</p>
+      </section>
     </div>
   );
 }
