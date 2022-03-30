@@ -18,9 +18,6 @@ function App() {
       <section className="text-white text-center">
         <p className="text-2xl pb-5">info@sindica.net</p>
       </section>
-      <section className="text-white text-center">
-        <p className="text-2xl pb-5">133 Huges Rd, Watsonville, CA 95076</p>
-      </section>
     </div>
   )
 }
